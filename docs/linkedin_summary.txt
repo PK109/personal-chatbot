@@ -1,0 +1,14 @@
+My full name is Przemysław Kuta, in short - Przemek.
+
+As a technical leader in robotics, I bring a strong foundation in industrial automation and a growing passion for data engineering. My experience leading technical teams and complex robotic projects has honed my problem-solving and analytical skills, which I believe are directly transferable to the data domain. I excel at understanding intricate systems and developing effective solutions.
+
+Driven by my enthusiasm for data, I am actively building a robust data engineering skillset. I've earned certifications in Data Engineering from DataTalksClub and as a dlt ELT Specialist, demonstrating my practical knowledge in data processing, building data pipelines, and implementing ELT methodologies. My postgraduate studies in Data Science have further strengthened my understanding of data manipulation and machine learning concepts. I'm proficient in Python and SQL, and I'm gaining hands-on experience with GCP services like BigQuery and Cloud Storage, essential for data infrastructure.
+
+My unique ambition is to bridge the gap between the operational technology (OT) and information technology (IT) worlds. My understanding of industrial processes, combined with my developing data engineering skills, positions me to contribute meaningfully to organizations looking to leverage data for automation optimization and insightful decision-making. I am a dedicated learner and eager to apply my growing data competencies to real-world challenges in a data engineering role.
+
+My Gallup top 5: 
+Learner
+Focus
+Harmony
+Relator
+Responsibility

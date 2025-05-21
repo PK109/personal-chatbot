@@ -1,0 +1,23 @@
+The local-data-streaming project is a Change Data Capture (CDC) system designed for real-time data processing and analytics. The project demonstrates key data engineering concepts such as event-driven architecture, fault tolerance, and event-time management with watermarks, making it suitable for real-world scenarios involving continuous data flows.
+Project Goals
+-Demonstrate Real-Time Data Engineering: Provide a fully functional environment to explore and understand streaming data pipelines and CDC concepts.
+-End-to-End Data Pipeline: Enable users to track changes from data ingestion to analytics and dashboard-ready outputs.
+-Reliability & Fault Tolerance: Highlight robust practices using Kafka and Docker orchestration.
+-Hands-On CDC and Streaming: Offers a practical playground for experimenting with CDC, stream processing, and real-time analytics.
+Key Features
+-Real-Time Data Capture: Monitors PostgreSQL database changes and streams them as Kafka events using Debezium.
+-Advanced Event Processing: Processes and analyzes data streams in real-time using Apache Flink, applying transformations and analytics.
+-Fault Tolerance: Utilizes a Kafka three-broker setup for high availability and resilience.
+-Custom Health Checks & Scheduling: Implements enhanced orchestration, ensuring system reliability even in complex multi-container setups.
+System Architecture
+-Data Ingestion: A Python worker inserts data into PostgreSQL and sets up Kafka Connect.
+-Change Data Capture: Debezium, integrated with Kafka Connect, detects and converts database changes into Kafka events.
+-Stream Processing: Apache Flink consumes Kafka events, performing real-time transformations and analytics.
+-Output Pipelines: Processed data is sent back to Kafka topics and written to a database for analytics and dashboard consumption.
+Technologies Used
+-PostgreSQL: For both initial data storage and as the sink for processed, analytics-ready data.
+-Kafka & Kafka Connect: The backbone of the event streaming platform, enabling high-throughput, fault-tolerant message delivery.
+-Debezium: Provides Change Data Capture by monitoring and streaming database changes.
+-Apache Flink: Handles real-time stream processing and analytics.
+-Docker Compose: Orchestrates all components, enabling easy local deployment and management.
+-Python: Used for custom data ingestion and configuration scripts.

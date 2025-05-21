@@ -1,0 +1,23 @@
+The Zoho API Scripting Project provides a robust set of Python scripts and utilities designed to automate and simplify interactions with the Zoho Desk API. This toolkit is especially useful for organizations and administrators who want to automate account management, apply and manage Service Level Agreements (SLAs), and ensure safe data backup and restoration for Zoho Desk environments.
+Project Goals
+-Automation: Reduce manual work by automating routine Zoho Desk operations.
+-Reliability: Safeguard data changes with backup/restore utilities.
+-Efficiency: Provide convenient tools for bulk operations and streamlined management.
+-Accessibility: Offer reusable scripts and Jupyter Notebooks for easy customization.
+-Security: Use OAuth-based authentication and keep sensitive credentials safe.
+Key Features
+Authentication Management
+-Obtain and refresh OAuth tokens for secure API access, ensuring scripts always work with valid credentials.
+-Easy integration with Zoho’s recommended authentication flows.
+Account and SLA (Service Level Agreement) Management
+-Read account data from Zoho Desk, allowing you to fetch details for analysis or reporting.
+-Update account information directly via script, supporting bulk updates or automated changes.
+-List and count accounts with flexible filters and views, ideal for reporting or batch operations.
+-Apply and manage SLAs for accounts, including associating or removing SLAs automatically.
+Backup Utilities
+-Backup account data (with metadata) before making changes, protecting against accidental data loss.
+-Restore updated fields from backup, enabling safe rollbacks if needed.
+-Save and load backups to/from JSON files, with timestamp and changed-fields metadata.
+Department and View Management - List available departments and views to help target API operations more precisely.
+Jupyter Notebook Integration - Provides ready-to-use notebooks for interactive use, testing, and easy adaptation to your own Zoho Desk workflows.
+
