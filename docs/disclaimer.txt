@@ -1,0 +1,5 @@
+This chatbot is a prototype powered by a Gemini language models and responds based on the information explicitly provided to it.
+
+* **Limited knowledge scope:** The chatbot's responses are based on the specific context or data it has been given. It cannot browse the internet or access real-time or general knowledge.
+* **Potential for error:** While it aims to be helpful, the chatbot may still generate inaccurate or misleading responses. For some critical information confirm it with Przemysław Kuta. 
+* **Data logging:** Conversation history might be used for further improvements and development. Information will not be shared with any other party.

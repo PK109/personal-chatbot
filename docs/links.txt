@@ -1,0 +1,4 @@
+Links to projects that can be referred to:
+e-commerce-workflow: https://github.com/PK109/e-commerce-workflow
+data-streaming-platform: https://github.com/PK109/local-data-streaming
+zoho-api-scripting: https://github.com/PK109/Zoho-Api-scripting-project

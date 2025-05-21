@@ -1,0 +1,25 @@
+e-commerce-workflow is an open-source data pipeline template for processing e-commerce data on Google Cloud Platform. It automates infrastructure setup, data ingestion, transformation, and prepares data for visualization in BI tools like Looker Studio.
+Goals
+-Automate setup of GCP infrastructure for analytics.
+-Utilize dbt to transform raw data into analytics-ready datasets.
+-Provide a modular, open-source template that can be reused, extended, or customized for similar e-commerce data processing use cases.
+Key Features
+-Infrastructure-as-Code: Uses Terraform to provision GCP resources (Compute Engine, BigQuery, GCS)
+-Workflow Orchestration: Kestra manages data extraction, ingestion, and transformation flows.
+-Data Transformation: dbt builds and tests data models.
+-Visualization Ready: Output is ready for BI dashboards.
+-Modular Project Structure 	Organized directories (terraform/, kestra/, dbt/, spark/) for different pipeline components.
+-Cloud-Native and Scalable: Built to run on GCP and leverage cloud scalability.
+-Automated Setup Scripts: Shell scripts and detailed setup instructions for deploying and validating the infrastructure and data workflows.
+Architecture Overview
+Terraform provisions GCP resources.
+Kestra orchestrates flows:
+-Extracts and uploads raw data to GCS.
+-Ingests data to BigQuery and triggers dbt jobs.
+dbt transforms data for analytics.
+Data is then accessible for BI tools.
+Pipeline Flow:
+-Extract Raw Data: Download raw data files from a server, split by day, and upload to GCS.
+-Batch Extraction: Helper workflow for bulk extraction.
+-Ingest to BigQuery: Triggered automatically when files land in GCS; loads data into BigQuery and runs dbt transformations.
+-Dashboard Ready: Once the pipeline completes, data is ready for dashboarding in Looker Studio or similar tools.

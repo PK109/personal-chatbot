@@ -8,14 +8,14 @@ def init_session_state():
     if "project_intro" not in st.session_state:
         st.session_state.project_intro = []
         st.session_state.project_intro.append({'role': 'system', "content": "Here is a information about main projects developed by Przemysław Kuta, so called. There were also minor ones, that are not described here."})
-        for fname in ["../../docs/e-commerce-workflow.txt", "../../docs/data_streaming.txt", "../../docs/zoho_api.txt", "../../docs/links.txt"]:
+        for fname in ["./docs/e-commerce-workflow.txt", "./docs/data_streaming.txt", "./docs/zoho_api.txt", "./docs/links.txt"]:
             with open(fname, "r") as f:
                 st.session_state.project_intro.append({'role': 'system', "content": f.read()})
     
     if "personal_intro" not in st.session_state:
         st.session_state.personal_intro = []
         st.session_state.personal_intro.append({'role': 'system', "content": "Here is a brief information about Przemysław Kuta."})
-        for fname in ["../../docs/linkedin_summary.txt", "../../docs/skillset_summary.txt"]:
+        for fname in ["./docs/linkedin_summary.txt", "./docs/skillset_summary.txt"]:
             with open(fname, "r") as f:
                 st.session_state.personal_intro.append({'role': 'system', "content": f.read()})
     
@@ -27,7 +27,7 @@ def init_session_state():
         st.session_state.messages.append({"role": "system", "content": system_message})
     
     if "placeholder" not in st.session_state:
-        with open("../../docs/faq.txt", "r") as f:
+        with open("./docs/faq.txt", "r") as f:
             text = f.read()
             lines = text.split("\n")
         st.session_state.placeholder = random.choice(lines)

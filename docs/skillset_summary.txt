@@ -1,0 +1,9 @@
+I’m a motivated and curious individual with a strong foundation in data engineering, with fascination around ML and AI world, consistently driven by a desire to learn and build impactful solutions. My data journey began with hands-on exploration in Python, SQL and ML algorithms, building simple classification and regression models. Later I have focused more on data pipeline construction. Since then, I’ve deepened my skills through coursework and personal projects that span containerization (Docker), orchestration (Airflow, Kestra, Mage.ai), batch and stream processing (Apache Spark, Flink, Kafka), and cloud tools (GCP: GCE, BigQuery, GCS, IAM) with IaaC (Terraform).
+
+My projects reflect a practical, end-to-end understanding of modern data platforms. For example, I built a streaming CDC system using PostgreSQL, Kafka Connect (Debezium), and Apache Flink, showcasing real-time analytics capabilities within a fully containerized architecture. 
+
+Another interesting project was related to e-commerce workflow. This project implements a data pipeline for processing e-commerce data, leveraging Terraform, Kestra, and dbt. It is designed to be fully deployed to the cloud, supporting direct integration with Looker Studio or similar analytics tools for dashboard creation and reporting.
+
+I thrive on breaking down complex systems and iterating toward clarity and performance. Guided by Gallup strengths like Learner, Focus, and Responsibility, I seek challenges that help me grow both technically and strategically.
+
+Right now, I focus myself on LLM-oriented applications, utilizing LangChain to build modular and robust code for Agentic AI. The best example for this development is this chatbot application, that is step by step improved by gaining knowledge about LLM integration.
