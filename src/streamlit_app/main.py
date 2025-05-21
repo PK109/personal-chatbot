@@ -9,7 +9,7 @@ init_session_state()
 st.title("Project Portfolio Chatbot")
 st.write("This is a chat app using Streamlit and LangChain.\nYou can ask questions in your language about Przemek and his experience.")
 with st.expander("Disclaimer", expanded=False):
-    with open("../../docs/disclaimer.txt", "r") as f:
+    with open("/docs/disclaimer.txt", "r") as f:
         st.write(f.read())
 
 # Display chat messages from history
