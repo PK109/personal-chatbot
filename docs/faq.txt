@@ -3,7 +3,7 @@ What was the objective and architecture of your CDC data streaming project?
 How did you implement change data capture in your portfolio work?
 How do your projects demonstrate your understanding of end-to-end data pipelines?
 How have you used Docker and Docker Compose in your data engineering workflows?
-How did you use Google Cloud tools like BigQuery or GCS in your projects?
+Which tools did you use from Google Cloud Platform in your projects? How did you use them?
 Can you describe your experience orchestrating workflows?
 How does your portfolio demonstrate readiness for a data/ai related role?
 How do your Gallup strengths influence the way you approach data engineering tasks?

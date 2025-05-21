@@ -7,7 +7,7 @@ def init_session_state():
 
     if "project_intro" not in st.session_state:
         st.session_state.project_intro = []
-        st.session_state.project_intro.append({'role': 'system', "content": "Here is a information about main projects developed by Przemysław Kuta, so called. There were also minor ones, that are not described here."})
+        st.session_state.project_intro.append({'role': 'system', "content": "Here is a information about main projects developed by Przemysław Kuta. There were also minor ones, that are not described here."})
         for fname in ["./docs/e-commerce-workflow.txt", "./docs/data_streaming.txt", "./docs/zoho_api.txt", "./docs/links.txt"]:
             with open(fname, "r") as f:
                 st.session_state.project_intro.append({'role': 'system', "content": f.read()})

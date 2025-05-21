@@ -21,29 +21,38 @@ for message in st.session_state.messages:
 if prompt := st.chat_input(placeholder=st.session_state.placeholder, key="chat_input", max_chars=500):
     with st.chat_message("user"):
         st.markdown(prompt)
-    if len(st.session_state.messages) > 1:
-        recent_messages = st.session_state.messages[-1]
-    else:
-        recent_messages = "No recent messages."
     st.session_state.messages.append({"role": "user", "content": prompt})
-    response = classification_prompt.invoke({"input": prompt, "messages": recent_messages["content"]})
+    response = classification_prompt.invoke({"input": prompt})
     classification = structured_llm.invoke(prompt)
     prompt_category = classification.model_dump()['category']
     if prompt_category == "followup question":
         prompt_category = st.session_state.last_category
     st.session_state.last_category = prompt_category
 
-    # Compose messages based on category
+    # Display assistant response in chat message container
     if prompt_category == "other":
-        messages = st.session_state.project_intro + st.session_state.personal_intro + st.session_state.messages
-    elif prompt_category in ["about Me", "experience"]:
-        messages = st.session_state.personal_intro + st.session_state.messages
-    elif prompt_category in ["programming", "projects", "development"]:
-        messages = st.session_state.project_intro + st.session_state.messages
-    else:
-        messages = st.session_state.messages
+        messages = []
+        messages.extend(st.session_state.project_intro)
+        messages.extend(st.session_state.personal_intro)
+        messages.extend(st.session_state.messages)
 
+    elif prompt_category in ["about Me", "experience"]:
+        messages = []
+        messages.extend(st.session_state.personal_intro)
+        messages.extend(st.session_state.messages)
+
+    elif prompt_category in ["programming", "projects", "development"]:
+        messages = []
+        messages.extend(st.session_state.project_intro)
+        messages.extend(st.session_state.messages)
+
+    else:
+        messages = []
+        messages.extend(st.session_state.messages)       
+    
     with st.chat_message("assistant"):
         stream = llm.stream(messages)
         response = st.write_stream(stream)
+        
+        # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
