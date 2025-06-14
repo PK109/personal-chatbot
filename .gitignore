@@ -1,8 +1,14 @@
+# Custom locations
+.ssh/
+secrets.toml
+google-cloud-sdk/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+
 
 # C extensions
 *.so

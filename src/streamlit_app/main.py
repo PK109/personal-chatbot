@@ -1,8 +1,10 @@
 import streamlit as st
+from utils.auth import authenticate
+authenticate()
+
 from utils.prompts import classification_prompt
 from utils.llm_setup import llm, structured_llm
 from utils.session_state import init_session_state
-
 
 init_session_state()
 
@@ -24,7 +26,7 @@ if prompt := st.chat_input(placeholder=st.session_state.placeholder, key="chat_i
     st.session_state.messages.append({"role": "user", "content": prompt})
     response = classification_prompt.invoke({"input": prompt})
     classification = structured_llm.invoke(prompt)
-    prompt_category = classification.model_dump()['category']
+    prompt_category = classification.model_dump()['category'] # type: ignore[union-attr]
     if prompt_category == "followup question":
         prompt_category = st.session_state.last_category
     st.session_state.last_category = prompt_category
